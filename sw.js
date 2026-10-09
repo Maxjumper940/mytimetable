@@ -1,6 +1,6 @@
 /* My Timetable service worker: keeps the whole app on the phone so it opens offline.
    Change VERSION when you publish an update. */
-const VERSION="mtt-web-1.9.2-4-p1";
+const VERSION="mtt-web-1.9.2-4-p2";
 const ASSETS=["./","index.html","config.js","firebase-config.js","premium-gate.js","premium-ui.js","premium.bundle.js","web-bridge.js","web-scan.js","ocr/jsQR.js","manifest.json","fonts/fonts.css",  "fonts/BricolageGrotesque-latin-ext.woff2",  "fonts/BricolageGrotesque-latin.woff2",  "fonts/Figtree-latin-ext.woff2",  "fonts/Figtree-latin.woff2",  "fonts/JetBrainsMono-latin-ext.woff2",  "fonts/JetBrainsMono-latin.woff2",
   "icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","icons/apple-touch-icon.png","icons/favicon-32.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(VERSION).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});

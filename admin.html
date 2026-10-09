@@ -28,7 +28,8 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95rem;letter-s
     <div class="row">
       <label>How many<input type="number" id="n" value="1" min="1" max="50" style="width:90px"></label>
       <label>Days each<input type="number" id="days" value="30" min="1" max="366" style="width:100px"></label>
-      <label>Note (who it's for, payment ref)<input id="note" style="width:260px" maxlength="120"></label>
+      <label>Buyer email (optional: only this Google account can use it)<input id="email" type="email" style="width:260px" maxlength="254" placeholder="student@gmail.com"></label>
+      <label>Note (who it's for, payment ref)<input id="note" style="width:220px" maxlength="120"></label>
       <label>Must be used within (days, optional)<input type="number" id="exp" min="1" max="365" placeholder="never" style="width:120px"></label>
       <button class="primary" id="make">Make codes</button>
     </div>
@@ -36,7 +37,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95rem;letter-s
   </div>
   <div class="card"><div class="row" style="justify-content:space-between"><h2>Codes</h2>
     <label>Show<select id="filter"><option value="all">All</option><option value="unused">Unused</option><option value="used">Used</option></select></label></div>
-    <div class="scroll"><table><thead><tr><th>Code</th><th>Days</th><th>Note</th><th>Made</th><th>Status</th><th></th></tr></thead><tbody id="codes"></tbody></table></div></div>
+    <div class="scroll"><table><thead><tr><th>Code</th><th>Days</th><th>For</th><th>Note</th><th>Made</th><th>Status</th><th></th></tr></thead><tbody id="codes"></tbody></table></div></div>
   <div class="card"><h2>Users</h2>
     <div class="scroll"><table><thead><tr><th>Email</th><th>Premium until</th><th>Last code</th><th></th></tr></thead><tbody id="users"></tbody></table></div></div>
 </div>
